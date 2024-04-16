@@ -65,38 +65,9 @@ export default async function handler(req, res) {
             newAssets,
             i
           );
-          //   let data = new FormData();
-          //   data.append(
-          //     "file",
-          //     fs.createReadStream(
-          //       `${process.env.Project_Path}/images/${assets.items[i].id}_${assets.items[i].filename}`
-          //     )
-          //   );
-
-          //   let config = {
-          //     method: "post",
-          //     maxBodyLength: Infinity,
-          //     url: "https://asset-api.prismic.io/assets",
-          //     headers: {
-          //       repository: process.env.Destination_Repo,
-          //       Authorization: `Bearer ${token}`,
-          //       ...data.getHeaders(),
-          //     },
-          //     data: data,
-          //   };
-
-          //   await axios
-          //     .request(config)
-          //     .then((response) => {
-          //       console.log(JSON.stringify(response.data));
-          //       newAssets.push({ ...response.data, prevID: assets.items[i].id });
-          //     })
-          //     .catch((error) => {
-          //       console.log(error);
-          //     });
 
           //wait 1s
-         await delay(1500);
+          await delay(1500);
         }
 
         return res.status(200).json({ newAssets });
