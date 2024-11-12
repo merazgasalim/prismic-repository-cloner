@@ -68,7 +68,7 @@ export default async function handler(req, res) {
       for (let i = 0; i < allDocuments.length; i++) {
         let document = JSON.stringify(allDocuments[i]);
         const documentName = allDocuments[i].data.title[0].text || `document ${i}`;
-        //Update assets id with new one
+        //Update assets id with new one.
         for (let j = 0; j < newAssets.length; j++) {
           document = document.replaceAll(newAssets[j].prevID, newAssets[j].id);
         }
